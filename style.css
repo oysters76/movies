@@ -1,0 +1,204 @@
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(97, 99, 255, 0.7), rgba(97, 99, 255, 0.7)),
+    #5d5fef;
+  border-radius: 13px;
+  font-family: 'Roboto';
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 15%;
+  align-items: center;
+}
+
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+#maintitle{
+  font-size: 8vh;
+  font-family: 'Press Start 2P';
+  color: white;
+  font-weight: bold;
+}
+
+#subtitle {
+  font-size: 5vh;
+  color: white;
+}
+
+.searchFormContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchFormDiv {
+  display: absolute;
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 24px;
+  background-color: transparent;
+  width: 30vw;
+  padding: 2vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchFormDiv > input {
+  position: absolute;
+  left: 36.5%;
+  background-color: transparent;
+  border: none;
+  width: 27%;
+  color: white;
+}
+
+.searchFormDiv:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+
+#searchBtn {
+  width: 1.5%;
+  height: auto;
+  position: absolute;
+  left: 34.5%;
+  cursor: pointer;
+}
+
+#clearBtn {
+  display: none;
+  width: 2%;
+  height: auto;
+  position: absolute;
+  left: 63.5%;
+  cursor: pointer;
+  color: white;
+}
+
+.searchFormDiv > input:focus {
+  outline: none;
+}
+
+.spinner {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: darken;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  z-index: 2;
+  left: 0;
+}
+
+.loader {
+  border: 36px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 36px solid #5d5fef;
+  border-right: 36px solid #373af0;
+  border-left: 36px solid #373af0;
+  border-bottom: 36px solid #5d5fef;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.movieGrid {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(4, 25%);
+  row-gap: 15px;
+  column-gap: 0px;
+  overflow-y: auto;
+  margin-top: 1%;
+  overflow-x: hidden;
+  place-items: center;
+}
+
+.movieGrid > div {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  border-radius: 24px;
+  padding: 20px;
+  font-size: 150%;
+  width: 80%;
+}
+
+.footer{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 8%;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.footer > label{
+  font-family: 'Press Start 2P';
+  font-size: 0.5rm;
+  color: white;
+}
+
+.footer > label > a{
+  color: #1DA1F2;
+  text-decoration: none;
+}
+
+.footer > label > a:hover{
+  color : white
+}
