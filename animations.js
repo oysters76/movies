@@ -54,6 +54,7 @@ function performAction(event) {
 }
 
 function animateTitleUp() {
+  hideSearchSuggestIfOpen(null);
   marginTop = 15;
   animation = setInterval(moveTitleUp, 10);
   x = 0;
@@ -70,8 +71,7 @@ function animateTitleUp() {
       maintitle.style.opacity -= 0.1;
       subtitle.style.opacity -= 0.1;
       x += 0.01;
-      document.getElementsByClassName('container')[0].style.marginTop =
-        marginTop + '%';
+      document.querySelector('.container').style.marginTop = marginTop + '%';
     }
   }
 }

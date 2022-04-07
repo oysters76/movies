@@ -56,6 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .searchFormDiv > input {
@@ -68,7 +69,7 @@ body {
 }
 
 .searchFormDiv:hover{
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgb(38, 38, 99);
 }
 
 #searchBtn {
@@ -201,4 +202,30 @@ body {
 
 .footer > label > a:hover{
   color : white
+}
+
+.searchSuggestDiv{
+  position: absolute;
+  top: 52.2%;
+  width: 32%;
+  background-color: rgb(38, 38, 99);
+  height: 10vh;
+  z-index: 2;
+  border-top: none;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  display: none;
+}
+
+.searchSuggestDiv > div {
+  padding-left: 1em;
+  color: white;
+  width: 95%;
+  
+}
+
+.searchSuggestDiv > div:hover{
+  background-color: rgb(76, 77, 200); 
+  cursor: pointer;
 }
