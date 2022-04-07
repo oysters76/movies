@@ -1,3 +1,6 @@
+const SIZE_OF_SEARCH_SUGGEST_DIV = 3.5; // vh
+const SEARCH_SUGGEST_BOX_TOP_MULTIPLIER = 3.1;
+
 function showClear(event) {
   if (searchText.value != '') {
     clearBtn.style.display = 'block';
@@ -27,7 +30,9 @@ function populateSearchSuggest(strs) {
   let searchSuggestDiv = document.querySelector('.searchSuggestDiv');
   let searchFormDiv = document.querySelector('.searchFormDiv');
   searchSuggestDiv.style.top =
-    (searchFormDiv.getBoundingClientRect()['top'] / 600) * 100 + 3.1 + '%';
+    (searchFormDiv.getBoundingClientRect()['top'] / 600) * 100 +
+    SEARCH_SUGGEST_BOX_TOP_MULTIPLIER +
+    '%';
   searchSuggestDiv.style.display = 'block';
   searchFormDiv.style.backgroundColor = 'rgb(38, 38, 99)';
   searchFormDiv.style.borderBottom = 'none';
@@ -42,7 +47,7 @@ function buildSearchSuggestStrs(elem, strs) {
   elem.style.flexDirection = 'column';
   elem.style.justifyContent = 'center';
   elem.style.alignItems = 'flex-start';
-  elem.style.height = strs.length * 3.5 + 'vh';
+  elem.style.height = strs.length * SIZE_OF_SEARCH_SUGGEST_DIV + 'vh';
   for (let i = 0; i < strs.length; i++) {
     let strDiv = document.createElement('div');
     let strLbl = document.createElement('label');
